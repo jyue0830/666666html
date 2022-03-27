@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            const c =document.getElementById("c");                 
+            c.onclick= function(){
+                const a =document.getElementById("a");
+                const b =document.getElementById("b");
+                const aa =document.getElementById("aa");
+                const ans =document.getElementById("ans");
+                const aval=parseFloat(a.value);
+                const bval=parseFloat(b.value);
+                const aaval=aa.value;
+                let ansval;
+                if (aaval=="+") {
+                    ansval=aval+bval;
+                }else if (aaval=="-") {
+                    ansval=aval-bval;
+                }else if (aaval=="*") {
+                    ansval=aval*bval;
+                }else if (aaval=="/") {
+                    ansval=aval/bval;
+                }
+                ans.innerText=ansval;
+            }
+            const ccccc=document.getElementById("ccccc")
+            ccccc.onclick=function(){
+                const a1 =document.getElementById("a1");
+                const b1 =document.getElementById("b1");
+                const anss =document.getElementById("anss");
+                const a1val=parseFloat(a1.value);
+                const b1val=parseFloat(b1.value);
+                let anssval=0;
+                for(i=a1val;i<=b1val;i++){
+                    anssval=anssval+i  
+                console.log(anssval);
+                anss.innerText=anssval;
+                }
+            }   
+            const ccc=document.getElementById("ccc");
+            ccc.onclick=function(){
+                const a2=document.getElementById("a2")
+                const b2=document.getElementById("b2")
+                const c2=document.getElementById("c2")
+                const avg=document.getElementById("avg")
+                const a2val=parseFloat(a2.value);
+                const b2val=parseFloat(b2.value);
+                const c2val=parseFloat(c2.value);
+                let avgval=avg.value;
+                avgval=a2val/3+b2val/3+c2val/3
+                console.log(avgval);
+                if (avgval>=60)
+                    avg.style.color="blue";
+                else 
+                    avg.style.color="red";
+                avg.innerText=avgval;
+            }   
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="a">                 
+    <select id="aa">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="text" id="b">
+    =
+    <span id="ans"></span>
+    <button id="c">按</button><br/>
+    <hr/>
+    <input type="text" id="a1">
+    加到
+    <input type="text" id="b1">
+    =
+    <span id="anss"></span>
+    <button id="ccccc">按</button><br/>
+    <hr/>
+    國文<input type="text" id="a2"><br/>
+    英文<input type="text" id="b2"><br/>
+    數學<input type="text" id="c2"><br/>
+    <span id="avg">平均</span><br/>
+    <button id="ccc">算</button>
+</body>
+</html>
