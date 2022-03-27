@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            const ccccc=document.getElementById("ccccc")
+            ccccc.onclick=function(){
+                const a =document.getElementById("a");
+                const b =document.getElementById("b");
+                const anss =document.getElementById("anss");
+                const aval=parseFloat(a.value);
+                const bval=parseFloat(b.value);
+                let anssval=0;
+                for(i=aval;i<=bval;i++){
+                    anssval=anssval+i  
+                console.log(anssval);
+                anss.innerText=anssval;
+                }
+            }   
+        }
+    </script>
+</head>
+<body>
+    a加到b<br/>
+    <input type="text" id="a">
+    加到
+    <input type="text" id="b">
+    =
+    <span id="anss"></span>
+    <button id="ccccc">按</button>
+</body>
+</html>
