@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            const c =document.getElementById("c");                 
+            c.onclick= function(){
+                const a =document.getElementById("a");
+                const b =document.getElementById("b");
+                const aa =document.getElementById("aa");
+                const ans =document.getElementById("ans");
+                const aval=parseFloat(a.value);
+                const bval=parseFloat(b.value);
+                const aaval=aa.value;
+                let ansval;
+                if (aaval=="+") {
+                    ansval=aval+bval;
+                }else if (aaval=="-") {
+                    ansval=aval-bval;
+                }else if (aaval=="*") {
+                    ansval=aval*bval;
+                }else if (aaval=="/") {
+                    ansval=aval/bval;
+                }
+                ans.innerText=ansval;
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="a">                 
+    <select id="aa">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="text" id="b">
+    =
+    <span id="ans"></span>
+    <button id="c">c</button>
+</body>
+</html>
