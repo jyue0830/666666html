@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            const ccc=document.getElementById("ccc");
+            ccc.onclick=function(){
+                const a=document.getElementById("a")
+                const b=document.getElementById("b")
+                const c=document.getElementById("c")
+                const avg=document.getElementById("avg")
+                const aval=parseFloat(a.value);
+                const bval=parseFloat(b.value);
+                const cval=parseFloat(c.value);
+                let avgval=avg.value;
+                avgval=aval/3+bval/3+cval/3
+                console.log(avgval);
+                if (avgval>=60)
+                    avg.style.color="blue";
+                else 
+                    avg.style.color="red";
+                avg.innerText=avgval;
+            }   
+            
+        }
+    </script>
+</head>
+<body>
+    國文<input type="text" id="a"><br/>
+    英文<input type="text" id="b"><br/>
+    數學<input type="text" id="c"><br/>
+    <span id="avg">平均</span><br/>
+    <button id="ccc">算</button>
+</body>
+</html>
